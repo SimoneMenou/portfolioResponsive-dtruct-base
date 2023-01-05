@@ -1,0 +1,822 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Antonio&family=Barlow+Semi+Condensed:wght@100&family=Barlow:wght@100&family=Bebas+Neue&family=Fragment+Mono&family=Lobster&family=Oswald:wght@200&family=Playfair+Display&family=Roboto+Mono:wght@100&family=Roboto:wght@100&family=Silkscreen&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Semi+Condensed:wght@100&family=Barlow:wght@100&family=Bebas+Neue&family=Fragment+Mono&family=Lobster&family=Oswald:wght@200&family=Playfair+Display&family=Roboto+Mono:wght@100&family=Roboto:wght@100&family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Semi+Condensed:wght@100&family=Barlow:wght@100&family=Bebas+Neue&family=Fragment+Mono&family=Lobster&family=Oswald:wght@200&family=Playfair+Display&family=Roboto+Mono:wght@100&family=Roboto:wght@100&family=Silkscreen&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Barlow+Semi+Condensed:wght@100&family=Barlow:wght@100&family=Bebas+Neue&family=Fragment+Mono&family=Lobster&family=Oswald:wght@200&family=Playfair+Display&family=Roboto+Mono:wght@100&family=Roboto:wght@100&family=Silkscreen&family=Source+Code+Pro&display=swap');
+/*Je vais créer mes variables pour le choix des couleur 1st pour le mode de base */
+:root
+{
+    --couleur_section :#F4EBD0;
+    --font-nav : 'Roboto', sans-serif;
+    --home_text_color: black;
+    --family-font : 'Bebas Neue', cursive;
+   
+}
+/*Pas de scroll pour la version web*/
+html
+{
+    cursor: url(./cursor.svg),default;
+}
+body
+{
+    overflow: hidden;
+}
+header
+{
+    position: fixed;
+}
+/*1.////////////////////////////////////////////////////////////////////////////////////Curseur custom sur tt le script////////*/
+.nom,.fonction ,.titre,.time1 ,#navbar,.titre1,.titre2,.titre3,.titre5
+{
+    font-family: var(--family-font);
+}
+/*Animations apparition texte intro////////////////////////////////////////////////////////////////////*/
+@keyframes apparition
+{
+    100%
+    {
+        opacity: 1;
+        transform: none;
+    }
+}
+.titre
+{
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 0.9s 0.3s ease-out forwards;
+}
+.nom
+{
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 0.8s 0.2s ease-out forwards;
+}
+.fonction
+{
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 1s 0.5s ease-out forwards;
+}
+#navbar a
+{
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 1s 0.9s ease-out forwards;
+}
+/*Animations////////////////////////////////////////////////////////////////////*/
+/* text animation  effet machine à ecrire*/
+@keyframes animated-text
+{
+    from{width: 0;}
+    to{ width: 45%;}
+}
+.hello
+{
+    animation:
+    animated-text 2s steps(20,end) 1s 1 normal both,
+    type 600ms steps(30, end) 8;
+}
+.hello1
+{
+    animation:
+    animated-text 2s steps(20,end) 3s 1 normal both,
+    taper 600ms steps(20,end) 8 ;
+}
+.hello2
+{
+    animation:
+    animated-text 2s steps(20,end) 5s 1 normal both,
+    taper 600ms steps(20,end) 8;
+}
+.hello3
+{
+    animation:
+    animated-text 2s steps(20,end) 7s 1 normal both,
+    taper 600ms steps(20,end) 8;
+}
+/* text animation  effet machine à ecrire*/
+.content0
+{
+    position: absolute;
+    z-index: 1000;
+    width: 100vw;
+    font-size: 20%;
+    display: grid;
+    grid-template-columns:  repeat(3,30%);
+    gap: 10%;
+    box-sizing: border-box;
+    color: var(--home_text_color);
+}
+.time1 
+{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    margin-top: 5%;
+    font-size: 20px;
+}
+/*2.//////////////content time ////////////////////*/
+/*3.//////////////Navbar ////////////////////*/
+#navbar 
+{
+    transition: 0.4s;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1000;
+    margin-left: 30%;
+    padding-top: 5%;
+    margin-top: 1%;
+}
+#navbar a 
+{
+    color: black;
+    text-align: center;
+    padding: 1%;
+    text-decoration: none;
+    line-height: 25px;
+    border-radius: 5px;
+    font-size: 40px;
+}
+#navbar a:hover 
+{
+    background-color:black;
+    color: white;
+    padding: 2%;
+}
+/*3.//////////////Navbar ////////////////////*/
+/*4.//////////////content couleur fond , text etc ////////////////////*/
+.content1,.content2,.content3,.content5
+{
+    background-color: var(--content1);
+    font-family: var(--font-nav);
+    color: var(--home_text_color);
+    box-sizing: border-box;
+    max-width:100vw;
+    max-height:100vh;
+}
+.nom
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    font-size:10vw;
+    margin-top: 30%;
+    margin-left: 5%;
+}
+
+.fonction 
+{
+   
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end:4;
+    font-size:2vw;
+    margin-left: 2%;
+  
+}
+
+.octo 
+{
+    
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end:3;
+    margin-top: 22%;
+    margin-left: 66%;
+    height: 100%;
+   
+}
+.titre
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 5vw;
+    margin-left: 5%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.sous_titre
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    font-size: 1vw;
+}
+
+
+/*5.//////////////structure des sections ////////////////////*/
+.content1,.content2,.content3,.content5
+{
+    display: grid;
+    grid-template-columns:  repeat(3,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 10px;
+}
+
+/*6.//////////////structure de la section portfolio un peu diff car trop galère les grid dans les grid////////////////////*/
+.content4
+{
+    background-color: var(--content1);
+    font-family: var(--font-nav);
+    color: var(--home_text_color);
+    box-sizing: border-box;
+    max-width:100vw;
+    max-height: 150vh;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#full img
+{   margin-left: 30%;
+    height: 100%;
+    position:absolute;
+    z-index: 200;
+   
+}
+#parcours img
+{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: 100vh;
+    z-index: 1000;
+}
+#demain img
+{
+    margin-top: 22%;
+    margin-left: 66%;
+    height: 100%;
+    position:absolute;
+    z-index: 200;
+ 
+}
+
+.titre1,.titre2,.titre3
+{
+    font-size:5vw;
+    margin-top: 5%;
+    margin-left: 10%;
+    z-index: 200;
+
+}
+.titre5
+{
+    font-size: 5vw;
+    margin-top: 10%;
+    margin-left: 10%;
+    z-index: 200;
+}
+.sous_titre5
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    font-size: 1vw;
+    margin-top: 2%;
+}
+.titre1,.titre2,.titre3,.titre5
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.about1 h3 
+{
+    font-family: var(--family-font);
+    font-size:30px;
+    margin-bottom:5%;
+}
+.about1 h4 
+{
+    font-family: var(--font-nav);
+    font-size:60px;
+    margin-bottom:5%;
+    
+}
+.about1 p 
+{
+    font-size:20px;
+    font-family:var(--font-nav);
+    margin-bottom: 10%;
+}
+.about1 img
+{
+ width: 40px;
+ height: 40px;
+ position: absolute;
+ left: 4%;
+
+}
+.about1 
+{
+    margin-top: 40%;
+    text-align: left;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    padding: 10%;
+    width: 40vw;
+	height: 50vh;
+    margin-right: 10%;
+    margin-top: 10%;
+    line-height: 3vh;
+    background-color: #fefefe;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
+}
+.about2
+{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.content5
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 80vh;
+    line-height: 30px;
+    font-size: 15px;
+   
+}
+.cadre1
+{
+    background-color: #fefefe;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
+    color: black;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 50vw;
+}
+.cadre3
+{
+    background-color: #fefefe;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
+    color: black;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 40vw;
+}
+
+
+.col1
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 40%;
+    z-index: 100;
+    margin-left: 25%;
+    border-left: solid black 5px;
+    height: 60vh;
+}
+.col2
+{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 40%;
+    z-index: 100;
+    padding-bottom: 10%;
+    
+}
+.col3
+{
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 40%;
+    z-index: 1000;
+    padding-bottom: 10%;
+}
+
+
+.col1 h3,.col2 h3 , .col2 p 
+{
+    line-height: 150%;
+    margin-left: 10% ;
+    font-family: var(--family-font);
+    margin-bottom: 20%;
+    
+}
+.col1 li,.col2 li
+{
+   font-size: 1.5rem;
+   font-family: var(--font-nav);
+   margin-left: 10% ;
+   
+}
+.col1 h3 ,.col2 h3
+{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-right: 5%;
+}
+.col1 h3,.col2 h3 , .col2 p
+{
+    font-size: 20px;
+    
+}
+.col2 ,.col1
+{
+margin-right: 20%;
+}
+.col3 li
+{
+    font-weight: bold;
+    font-family: var(--family-font); 
+}
+.html h4 ,
+.css h4, 
+.illustrator h4,
+.trello h4
+{
+font-size: 80px;
+}
+.javascript h4 , 
+.photoshop h4  , 
+.indesign h4 , 
+.cms h4
+{
+font-size: 60px;
+}
+ .php h4 ,
+ .csharp h4 
+{
+font-size: 50px;
+
+}
+.python h4
+{
+font-size: 40px;
+}
+
+.html p ,
+.css p, 
+.illustrator p,
+.trello p,
+.javascript p , 
+.photoshop p , 
+.indesign p, 
+.cms p,
+.php p ,
+.csharp p,
+.python p
+{
+display:none;
+}
+.html:hover p ,
+.css:hover p ,
+.illustrator:hover p ,
+.trello:hover p ,
+.javascript:hover p ,
+.photoshop:hover p ,
+.indesign:hover p ,
+.cms:hover p,
+.php:hover p ,
+.csharp:hover p, 
+.python:hover p 
+{
+    display: block;
+    color: red;
+    font-size: 30px;
+}
+
+.cadre2
+{
+    background-color: #fefefe;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.32);
+    color: black;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin-top: 5%;
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+.cadre2:hover 
+{
+ background-color:red;
+}
+.cadre2 h3 ,.cadre2 p 
+{
+margin: 0;
+}
+.icon
+{
+width: 50px;
+}
+#front
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    width: 45vw;
+    margin-left: 30%;
+}
+#webap
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    width: 45vw;
+}
+.front-title
+{
+    font-family: var(--family-font);
+    font-size: 3vw;
+    margin-left: 30%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#front>.projet1 
+{
+ grid-column-start: 1;
+ grid-column-end: 1;
+ grid-row-start: 1;
+ width: 15vw;
+ height: 30vh;
+ }
+ #webapp> .projet1 
+ {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    width: 15vw;
+    height: 30vh;
+}
+ #front.projet2 , #webapp .projet2
+{
+ grid-column-start: 2;
+ grid-column-end: 2;
+ grid-row-start: 1;
+ width: 15vw;
+ height: 30vh;
+}
+#front .projet3 ,  #webapp .projet3
+{
+ grid-column-start: 3;
+ grid-column-end: 3;
+ grid-row-start: 1;
+ width: 15vw;
+ height: 30vh;
+}
+ #front .projet4 ,  #webapp .projet4
+{
+ grid-column-start: 1;
+ grid-column-end: 1;
+ grid-row-start: 2;
+ width: 15vw;
+ height: 30vh;
+ }
+
+#front .projet5 , #webapp .projet5
+{
+ grid-column-start: 2;
+ grid-column-end: 2;
+ grid-row-start: 2;
+ width: 15vw;
+ height: 30vh;
+}
+#front .projet6 ,  #webapp .projet6
+{
+ grid-column-start: 3;
+ grid-column-end: 3;
+ grid-row-start: 2;
+ width: 15vw;
+ height: 30vh;
+}
+.grid__title 
+{
+
+   text-align: center;
+   font-size: 36px;
+   color:black;
+   font-weight: bold;
+   letter-spacing: 2px;
+   position: relative;
+   margin-top: 40%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.viewbutton1 ,.viewbutton2,.viewbutton3,.viewbutton4,.viewbutton5,.viewbutton6,.viewbutton7,.viewbutton8,.viewbutton9
+{
+  margin: 25%;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  display: none;
+  position: relative;
+  margin-top: 40%;
+  transition: .5s ease;
+}
+
+.textp1
+{
+    text-align: center;
+    font-size: medium;
+    margin-top: 10%;
+    position: relative;
+    margin: 5%;
+}
+.projet1 img,
+.projet2  img, 
+.projet3 img,
+.projet4 img, 
+.projet5 img, 
+.projet6 img
+{
+    width: 15vw;
+    height: 30vh;
+    position: absolute;
+    transition: .5s ease;
+}
+.projet1:hover .viewbutton1,.projet2:hover .viewbutton2,.projet3:hover .viewbutton3,.projet4:hover .viewbutton4,.projet5:hover .viewbutton5,.projet6:hover .viewbutton6,
+.projet1:hover .viewbutton7,.projet2:hover .viewbutton8,.projet3:hover .viewbutton9
+{
+    display: block;
+}
+.projet1:hover img, .projet2:hover img, .projet3:hover img, .projet4:hover img, .projet5:hover img, .projet6:hover img
+{
+    opacity: 0.3;
+}
+.projet1:hover .textp1 ,.projet2:hover .textp1 ,.projet3:hover .textp1 
+{
+    display: none;
+}
+.projet1:hover .grid__title, .projet2:hover .grid__title, .projet3:hover .grid__title
+{
+    display: none;
+}
+
+ /* The Modal (background) */
+.modal1 , .modal 
+{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content 
+{
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width:40vw; /* Could be more or less, depending on screen size */
+    height: 45vh;
+}
+
+/* The Close Button */
+.close1
+{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+footer
+{
+    flex-shrink: 0;
+    color: black;
+}
+.mon_footer
+{
+   
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 50px 0 100px;
+    background-color:black;
+    color: aliceblue;
+    z-index: 2;
+}
+.bloc
+{
+    width: 25%;
+    margin: 0 30px;
+}
+.bloc h3 
+{
+    font-size: 25px;
+    padding-bottom: 20px;
+    font-family: var(--family-font);
+}
+ul
+{
+    list-style: none;
+}
+/*/////////////////////////////Text///////////////////////////////////////////////*/
+/* Animation */
+  .hello ,.hello1,.hello2,.hello3
+  {
+ 
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Source Code Pro', monospace;  
+    font-size: 20px;
+    color: black;
+    
+  }
+  
+  .hello
+  {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end:3;
+      margin-left: 2%;
+      height : 10%;
+      margin-bottom: 5%;
+  }
+  .hello1
+  {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end:3;
+      margin-left: 2%;
+      margin-top: 2%;
+      margin-bottom: 6%;
+      height : 8%;
+  }
+  .hello2
+  {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end:3;
+    
+      margin-left: 2%;
+      margin-top: 4%;
+      height : 8%;
+  }
+  .hello3
+  {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end:3;
+      margin-left: 2%;
+      margin-top: 6%;
+      height : 8%;
+    
+  }
+
+
+
+
+
+

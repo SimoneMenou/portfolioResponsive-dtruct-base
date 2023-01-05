@@ -1,0 +1,97 @@
+/*On commence par le plus grand ecran après le max
+Nest Hub Max 1280 *800
+*/
+@media only screen and (max-width: 1280px){
+@keyframes animated-text
+{
+    from{width: 0;}
+    to{ width: 55%;}
+}
+body
+{
+    background-color: aqua;
+}
+.content1
+{
+    max-width:1280px;
+}
+.nom
+{
+    margin-top: 50%;
+}
+.titre
+{
+    margin-top: 20%;
+}
+}
+
+@media only screen and (max-width: 1024px){
+@keyframes animated-text
+
+{
+    from{width: 0;}
+    to{ width: 55%;}
+}
+body
+{
+    background-color:red;
+}
+.content1
+{
+    max-width:1024px;
+}
+.nom
+{
+    margin-top: 50%;
+}
+.titre
+{
+    margin-top: 20%;
+}
+@media only screen and (max-width: 412px){
+body
+{
+    background-color: pink;
+}
+.time1
+{
+    margin-left: 2%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content:flex-start;
+}
+.content1
+{
+    max-width:1000px;
+}
+.nom
+{
+    font-size: 20vw;
+    display: flex;
+    justify-content: flex-start;
+}
+.titre
+{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 10vw;
+}
+.content0
+{
+ display: flex;
+ justify-content: flex-start;
+}
+.fonction
+{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 5vw;
+}
+.hello,.hello1,.hello2,.hello3
+{
+ font-size: medium;
+}
+}
+
+}
+
